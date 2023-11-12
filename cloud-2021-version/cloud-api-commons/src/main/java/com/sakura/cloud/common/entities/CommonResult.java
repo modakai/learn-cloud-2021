@@ -1,14 +1,16 @@
-package com.sakura.proivder.entities;
+package com.sakura.cloud.common.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.Accessors;
 
+/**
+ * @auther zzyy
+ * @create 2020-02-18 17:23
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Accessors(chain = true)
 public class CommonResult<T> {
     private Integer code;
     private String message;

@@ -1,7 +1,8 @@
 package com.sakura.proivder.controller;
 
-import com.sakura.proivder.entities.CommonResult;
-import com.sakura.proivder.entities.Payment;
+
+import com.sakura.cloud.common.entities.CommonResult;
+import com.sakura.cloud.common.entities.Payment;
 import com.sakura.proivder.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

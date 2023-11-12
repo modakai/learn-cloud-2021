@@ -1,6 +1,7 @@
 package com.sakura.proivder.service.impl;
 
-import com.sakura.proivder.entities.Payment;
+
+import com.sakura.cloud.common.entities.Payment;
 import com.sakura.proivder.mapper.PaymentMapper;
 import com.sakura.proivder.service.PaymentService;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.sakura.proivder.mapper;
 
-import com.sakura.proivder.entities.Payment;
+import com.sakura.cloud.common.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

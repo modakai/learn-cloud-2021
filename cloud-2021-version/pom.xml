@@ -14,6 +14,9 @@
     <!-- 管理子模块 -->
     <modules>
         <module>cloud-provider-payment8001</module>
+        <module>cloud-consumer-order80</module>
+        <module>cloud-api-commons</module>
+        <module>cloud-eureka-server7001</module>
     </modules>
 
 
@@ -30,6 +33,7 @@
         <druid.version>1.2.6</druid.version>
         <spring.boot.start.version>2.7.8</spring.boot.start.version>
         <mybatis.spring.boot.version>2.3.0</mybatis.spring.boot.version>
+        <hutool.version>5.8.16</hutool.version>
 
         <!-- cloud -->
         <spring.cloud.version>2021.0.8</spring.cloud.version>
@@ -79,6 +83,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.junit.jupiter</groupId>

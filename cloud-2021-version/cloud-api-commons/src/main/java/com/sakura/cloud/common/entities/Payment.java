@@ -1,4 +1,4 @@
-package com.sakura.proivder.entities;
+package com.sakura.cloud.common.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,11 +6,14 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
+/**
+ * @auther zzyy
+ * @create 2020-02-18 17:22
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Payment implements Serializable {
-    private static final long serialVersionUID = 1L;
     private Long id;
     private String serial;
 }

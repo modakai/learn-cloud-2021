@@ -1,6 +1,6 @@
 package com.sakura.proivder.service;
 
-import com.sakura.proivder.entities.Payment;
+import com.sakura.cloud.common.entities.Payment;
 import org.apache.ibatis.annotations.Param;
 
 public interface PaymentService {
