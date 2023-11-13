@@ -6,13 +6,9 @@ import com.sakura.cloud.common.entities.Payment;
 import com.sakura.proivder.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.net.URI;
-import java.util.List;
 
 @RestController
 @Slf4j
@@ -22,37 +18,6 @@ public class PaymentController {
 
     @Value("${server.port}")
     private String serverPort;
-
-    @Resource
-    private DiscoveryClient discoveryClient;
-
-    @GetMapping("/payment/discover")
-    public CommonResult<DiscoveryClient> getDiscovery() {
-        List<String> services = discoveryClient.getServices();
-        for (String service : services) {
-            // 服务名称
-            log.info("*****service**** {}", service);
-        }
-
-        // 根据 eureka 的 application 获取对应的微服务实例
-        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
-        for (ServiceInstance instance : instances) {
-            // 服务id
-            String serviceId = instance.getServiceId();
-            // 协议
-            String scheme = instance.getScheme();
-            // 服务端口号
-            int port = instance.getPort();
-            // 服务前缀
-            URI uri = instance.getUri();
-            // 实例的id
-            String instanceId = instance.getInstanceId();
-            log.info(serviceId + "\t" + scheme + "\t" + port + "\t" + uri + "\t" + instanceId);
-        }
-
-        return new CommonResult<>(200, "成功", discoveryClient);
-    }
-
 
     @PostMapping(value = "/payment/create")
     public CommonResult<Integer> create(@RequestBody Payment payment) {
