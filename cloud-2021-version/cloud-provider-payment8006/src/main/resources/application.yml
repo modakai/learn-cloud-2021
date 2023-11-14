@@ -1,0 +1,17 @@
+server:
+  port: 8006
+spring:
+  application:
+    name: cloud-proivder-8006
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        #hostname: 127.0.0.1
+        service-name: ${spring.application.name}
+        register: true
+        # 版本问题导致的 健康检查状态失败
+        health-check-url: http://localhost:8006/actuator/health
+        ip-address: localhost
+        prefer-ip-address: true
