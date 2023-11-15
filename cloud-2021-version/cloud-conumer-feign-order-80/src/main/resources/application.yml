@@ -16,4 +16,5 @@ feign:
         read-timeout: 1000
 logging:
   level:
+    # feign日志以什么级别监控哪个接口
     com.sakura.order.service.PaymentFeignService: debug
