@@ -15,4 +15,7 @@ public interface PaymentFeignService {
     // 写的是 CLOUD-PAYMENT-SERVICE 对应的微服务实例的接口路径
     @GetMapping(value = "/payment/get/{id}")
     CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
+
+    @GetMapping(value = "/payment/feign/timeout")
+    String paymentFeignTimeOut();
 }
