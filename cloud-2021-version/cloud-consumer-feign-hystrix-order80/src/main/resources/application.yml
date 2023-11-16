@@ -9,3 +9,5 @@ eureka:
 feign:
   hystrix:
     enabled: true
+  circuit-breaker:
+    enabled: true
