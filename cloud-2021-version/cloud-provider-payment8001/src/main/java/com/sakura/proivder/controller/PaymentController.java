@@ -27,6 +27,11 @@ public class PaymentController {
     @Resource
     private DiscoveryClient discoveryClient;
 
+    @GetMapping("/payment/lb")
+    public String lb() {
+        return serverPort;
+    }
+
     @GetMapping("/payment/discover")
     public CommonResult<DiscoveryClient> getDiscovery() {
         List<String> services = discoveryClient.getServices();
