@@ -1,3 +1,1 @@
-http://localhost:9527/payment/lb
-X-Request-Id: 1
-Content-Type: application/json
+POST http://localhost:3355/actuator/refresh
